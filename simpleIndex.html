@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Aid</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/initialStyle.css">
+</head>
+
+<body>
+    <header>
+        <h1>Teacher's Aid</h1>
+    </header>
+    <div class="wrapper">
+        <div class="formWrapper" id="form-login">
+            <h2>Login</h2>
+            <form>
+                <label for="email" class="form-label">Email: </label>
+                <input v-model="email" type="email" class="form-control" id="email">
+
+                <label for="password" class="form-label">Password: </label>
+                <input v-model="password" type="password" class="form-control" id="password">
+
+                <div class="center" id="alert">
+                    Invalid email or password.
+                </div>
+
+                <div class="center">
+                    <input type="submit" value="Log in" class="btn btn-primary submitButton">
+                </div>
+                <div class="center">
+                    <a href="#form-registration" id="register-link">Register</a>
+                </div>
+            </form>
+        </div>
+        <div class="formWrapper" id="form-registration" style="display: none;">
+            <h2>Registration</h2>
+            <form>
+                <label for="name" class="form-label">Name: </label>
+                <input v-model="name" type="text" class="form-control" id="name" required>
+                <div id="nameInvalidError" class="invalid-feedback">
+                    Please enter a valid name.
+                </div>
+
+                <label for="surname" class="form-label">Surname: </label>
+                <input v-model="surname" type="text" class="form-control" id="surname" required>
+                <div id="surnameInvalidError" class="invalid-feedback">
+                    Please enter a valid surname.
+                </div>
+
+                <label for="email" class="form-label">Email: </label>
+                <input v-model="email" type="email" class="form-control" required>
+                <div id="emailInvalidError" class="invalid-feedback">
+                    Please enter a valid email address.
+                </div>
+
+                <label for="password" class="form-label">Password: </label>
+                <input v-model="password" type="password" class="form-control" required>
+
+                <label for="password2" class="form-label">Password again: </label>
+                <input v-model="password2" type="password" class="form-control" id="password2" required>
+                <div id="passwordInvalidError" class="invalid-feedback">
+                    Password has to be at least 7 characters long.
+                </div>
+                <div id="noMatchError" class="invalid-feedback">
+                    Passwords do not match.
+                </div>
+
+                <div class="center">
+                    <input type="submit" value="Register" class="btn btn-primary submitButton">
+                </div>
+                <div class="center">
+                    <a href="#form-login" id="login-link">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/initialSimpleScript.js"></script>
+</body>
+
+</html>

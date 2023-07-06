@@ -1,0 +1,71 @@
+@import './base.css';
+@import 'https://fonts.googleapis.com/css?family=Quicksand';
+@import './global.css';
+
+h1 {
+    text-align: center;
+    padding-top: 15px;
+    font-family: Quicksand;
+    font-weight: 800;
+}
+
+header {
+    background-color: var(--bg-dark-green);
+    height: 10vh;
+    padding: 10px 0;
+    width: 100%;
+
+}
+
+div.formWrapper {
+    background-color: var(--bg-very-light-green);
+    padding: 15px 45px 20px;
+    border-radius: 10px;
+    width: 40%;
+    min-width: 500px;
+    height: fit-content;
+}
+
+.submitButton {
+    background-color: var(--bg-dark-green);
+    border: solid 2px var(--bg-darker-green);
+    margin: 15px 0 0;
+    padding: 5px 15px;
+}
+
+.submitButton:hover {
+    background-color: var(--bg-darker-green);
+    border: solid 2px var(--bg-darker-green);
+}
+
+h2 {
+    text-align: center;
+    font-weight: bolder;
+}
+
+a,
+.green {
+    text-decoration: none;
+    color: hsla(160, 100%, 37%, 1);
+    transition: 0.4s;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        place-items: center;
+        flex-direction: column;
+    }
+
+}
